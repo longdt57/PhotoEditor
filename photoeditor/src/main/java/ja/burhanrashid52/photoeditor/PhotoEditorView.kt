@@ -79,7 +79,7 @@ class PhotoEditorView @JvmOverloads constructor(
             }
         }
 
-        var widthParam = ViewGroup.LayoutParams.MATCH_PARENT
+        var widthParam = ViewGroup.LayoutParams.WRAP_CONTENT
         if (clipSourceImage) {
             widthParam = ViewGroup.LayoutParams.WRAP_CONTENT
         }
@@ -117,6 +117,8 @@ class PhotoEditorView @JvmOverloads constructor(
         params.addRule(CENTER_IN_PARENT, TRUE)
         params.addRule(ALIGN_TOP, imgSrcId)
         params.addRule(ALIGN_BOTTOM, imgSrcId)
+        params.addRule(ALIGN_LEFT, imgSrcId)
+        params.addRule(ALIGN_RIGHT, imgSrcId)
         return params
     }
 
