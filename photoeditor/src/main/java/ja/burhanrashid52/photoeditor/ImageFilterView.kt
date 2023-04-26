@@ -31,7 +31,7 @@ import kotlin.coroutines.suspendCoroutine
  * @version 0.1.2
  * @since 2/14/2018
  */
-internal class ImageFilterView @JvmOverloads constructor(
+class ImageFilterView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : GLSurfaceView(context, attrs), GLSurfaceView.Renderer {

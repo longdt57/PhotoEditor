@@ -11,7 +11,7 @@ import ja.burhanrashid52.photoeditor.MultiTouchListener.OnGestureControl
  *
  * @author <https:></https:>//github.com/burhanrashid52>
  */
-internal abstract class Graphic(
+abstract class Graphic(
     val context: Context,
     val layoutId: Int,
     val viewType: ViewType,

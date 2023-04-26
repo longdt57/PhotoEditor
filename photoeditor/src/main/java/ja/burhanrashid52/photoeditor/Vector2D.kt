@@ -4,7 +4,7 @@ import android.graphics.PointF
 import kotlin.math.atan2
 import kotlin.math.sqrt
 
-internal class Vector2D : PointF {
+class Vector2D : PointF {
     constructor() : super() {}
     constructor(x: Float, y: Float) : super(x, y) {}
 

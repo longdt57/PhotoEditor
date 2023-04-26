@@ -18,7 +18,7 @@ import androidx.appcompat.widget.AppCompatImageView
  * @version 0.1.2
  * @since 5/21/2018
  */
-internal class FilterImageView @JvmOverloads constructor(
+class FilterImageView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = 0
@@ -30,7 +30,7 @@ internal class FilterImageView @JvmOverloads constructor(
         mOnImageChangedListener = onImageChangedListener
     }
 
-    internal interface OnImageChangedListener {
+    interface OnImageChangedListener {
         fun onBitmapLoaded(sourceBitmap: Bitmap?)
     }
 

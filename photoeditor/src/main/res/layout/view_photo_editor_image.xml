@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:background="#555555">
 
     <ImageView
         android:id="@+id/imgPhotoEditorClose"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_gravity="top|start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
         android:elevation="1dp"
-        android:src="@drawable/ic_remove" />
+        android:padding="8dp"
+        android:src="@drawable/icon_close_white_16" />
 
     <FrameLayout
         android:id="@+id/frmBorder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp"
+        android:layout_margin="4dp"
         android:background="@drawable/rounded_border_tv">
 
         <ImageView
@@ -26,7 +29,7 @@
             android:layout_margin="4dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_remove" />
+            tools:src="@drawable/ic_remove" />
 
     </FrameLayout>
 

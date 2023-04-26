@@ -5,11 +5,11 @@ import android.view.MotionEvent
 
 // A listener for the image view that helps with the focus view logic.
 // i.e when you press on an empty space without stickers, it will de-select the focused sticker.
-internal class PhotoEditorImageViewListener(
+class PhotoEditorImageViewListener(
     private val viewState: PhotoEditorViewState,
     private val onSingleTapUpCallback: OnSingleTapUpCallback
 ) : SimpleOnGestureListener() {
-    internal interface OnSingleTapUpCallback {
+    interface OnSingleTapUpCallback {
         fun onSingleTapUp()
     }
 

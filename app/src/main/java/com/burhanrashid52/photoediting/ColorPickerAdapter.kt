@@ -11,7 +11,7 @@ import java.util.ArrayList
 /**
  * Created by Ahmed Adel on 5/8/17.
  */
-class ColorPickerAdapter internal constructor(
+class ColorPickerAdapter constructor(
     private var context: Context,
     colorPickerColors: List<Int>
 ) : RecyclerView.Adapter<ColorPickerAdapter.ViewHolder>() {
@@ -19,7 +19,7 @@ class ColorPickerAdapter internal constructor(
     private val colorPickerColors: List<Int>
     private lateinit var onColorPickerClickListener: OnColorPickerClickListener
 
-    internal constructor(context: Context) : this(context, getDefaultColors(context)) {
+    constructor(context: Context) : this(context, getDefaultColors(context)) {
         this.context = context
         inflater = LayoutInflater.from(context)
     }

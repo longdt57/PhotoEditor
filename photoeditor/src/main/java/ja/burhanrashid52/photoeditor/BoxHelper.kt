@@ -9,7 +9,7 @@ import android.widget.ImageView
  *
  * @author <https:></https:>//github.com/burhanrashid52>
  */
-internal class BoxHelper(
+class BoxHelper(
     private val mPhotoEditorView: PhotoEditorView,
     private val mViewState: PhotoEditorViewState
 ) {

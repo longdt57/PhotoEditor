@@ -10,7 +10,7 @@ import android.widget.TextView
  *
  * @author <https:></https:>//github.com/burhanrashid52>
  */
-internal class Emoji(
+class Emoji(
     private val mPhotoEditorView: PhotoEditorView,
     private val mMultiTouchListener: MultiTouchListener,
     private val mViewState: PhotoEditorViewState,

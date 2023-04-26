@@ -22,7 +22,7 @@ class EditingToolsAdapter(private val mOnItemSelected: OnItemSelected) :
         fun onToolSelected(toolType: ToolType)
     }
 
-    internal inner class ToolModel(
+    inner class ToolModel(
         val mToolName: String,
         val mToolIcon: Int,
         val mToolType: ToolType

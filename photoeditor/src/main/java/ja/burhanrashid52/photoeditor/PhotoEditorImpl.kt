@@ -30,7 +30,7 @@ import kotlinx.coroutines.withContext
  * @version 0.1.1
  * @since 18/01/2017
  */
-internal class PhotoEditorImpl @SuppressLint("ClickableViewAccessibility") constructor(
+class PhotoEditorImpl @SuppressLint("ClickableViewAccessibility") constructor(
     builder: PhotoEditor.Builder
 ) : PhotoEditor {
     private val photoEditorView: PhotoEditorView = builder.photoEditorView

@@ -17,7 +17,7 @@ import kotlin.math.min
  *
  *
  */
-internal class MultiTouchListener(
+class MultiTouchListener(
     deleteView: View?,
     photoEditorView: PhotoEditorView,
     photoEditImageView: ImageView?,
@@ -171,12 +171,12 @@ internal class MultiTouchListener(
         var maximumScale = 0f
     }
 
-    internal interface OnMultiTouchListener {
+    interface OnMultiTouchListener {
         fun onEditTextClickListener(text: String?, colorCode: Int)
         fun onRemoveViewListener(removedView: View?)
     }
 
-    internal interface OnGestureControl {
+    interface OnGestureControl {
         fun onClick()
         fun onLongClick()
     }

@@ -33,7 +33,7 @@ import kotlin.math.sqrt
  * [View]
  *
  */
-internal class ScaleGestureDetector(private val mListener: OnScaleGestureListener) {
+class ScaleGestureDetector(private val mListener: OnScaleGestureListener) {
     /**
      * The listener for receiving notifications when gestures occur.
      * If you want to listen for all the different gestures then implement
@@ -42,7 +42,7 @@ internal class ScaleGestureDetector(private val mListener: OnScaleGestureListene
      *
      * An application will receive events in the following order:
      */
-    internal interface OnScaleGestureListener {
+    interface OnScaleGestureListener {
         /**
          * Responds to scaling events for a gesture in progress.
          * Reported by pointer motion.

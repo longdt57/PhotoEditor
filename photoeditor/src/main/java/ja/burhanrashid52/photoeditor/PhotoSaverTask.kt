@@ -15,7 +15,7 @@ import java.io.IOException
  *
  * @author <https:></https:>//github.com/burhanrashid52>
  */
-internal class PhotoSaverTask(
+class PhotoSaverTask(
     private val photoEditorView: PhotoEditorView,
     private val boxHelper: BoxHelper,
     private var saveSettings: SaveSettings
