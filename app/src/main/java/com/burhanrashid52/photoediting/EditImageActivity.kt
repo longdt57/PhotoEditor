@@ -181,9 +181,11 @@ class EditImageActivity : BaseActivity(), OnPhotoEditorListener, View.OnClickLis
         imgShare.setOnClickListener(this)
     }
 
-    override fun onEditTextChangeListener(rootView: View?, text: String?, colorCode: Int) {
+    override fun onEditTextChangeListener(rootView: View?, textView: TextView?) {
+        val textInput = textView?.text.toString()
+        val colorCode = textView?.currentTextColor ?: 0
         val textEditorDialogFragment =
-            TextEditorDialogFragment.show(this, text.toString(), colorCode)
+            TextEditorDialogFragment.show(this, textInput, colorCode)
         textEditorDialogFragment.setOnTextEditorListener(object :
             TextEditorDialogFragment.TextEditorListener {
             override fun onDone(inputText: String?, colorCode: Int) {

@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
+import androidx.core.view.isVisible
 import ja.burhanrashid52.photoeditor.MultiTouchListener.OnGestureControl
 
 /**
@@ -15,7 +16,8 @@ abstract class Graphic(
     val context: Context,
     val layoutId: Int,
     val viewType: ViewType,
-    val graphicManager: GraphicManager?) {
+    val graphicManager: GraphicManager?
+) {
 
     val rootView: View
 
@@ -31,7 +33,6 @@ abstract class Graphic(
         setupView(rootView)
         setupRemoveView(rootView)
     }
-
 
     private fun setupRemoveView(rootView: View) {
         //We are setting tag as ViewType to identify what type of the view it is
@@ -60,6 +61,9 @@ abstract class Graphic(
         val boxHelper = BoxHelper(photoEditorView, viewState)
         return object : OnGestureControl {
             override fun onClick() {
+                if (isHelpBoxVisible()) {
+                    updateView(rootView)
+                }
                 boxHelper.clearHelperBox()
                 toggleSelection()
                 // Change the in-focus view
@@ -71,6 +75,8 @@ abstract class Graphic(
             }
         }
     }
+
+    private fun isHelpBoxVisible() = rootView.findViewById<View>(R.id.imgPhotoEditorClose)?.isVisible == true
 
     open fun setupView(rootView: View) {}
 }

@@ -21,7 +21,7 @@ import ja.burhanrashid52.photoeditor.FilterImageView.OnImageChangedListener
  * @version 0.1.1
  * @since 1/18/2018
  */
-class PhotoEditorView @JvmOverloads constructor(
+open class PhotoEditorView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = 0

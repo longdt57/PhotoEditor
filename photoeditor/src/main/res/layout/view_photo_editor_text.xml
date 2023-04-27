@@ -2,7 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:background="@android:color/darker_gray">
 
     <FrameLayout
         android:id="@+id/frmBorder"
@@ -27,8 +28,8 @@
         android:id="@+id/imgPhotoEditorClose"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:layout_gravity="top|start"
+        android:layout_gravity="top|end"
         android:elevation="1dp"
-        android:src="@drawable/ic_remove" />
+        android:src="@drawable/icon_close_white_16" />
 
 </FrameLayout>

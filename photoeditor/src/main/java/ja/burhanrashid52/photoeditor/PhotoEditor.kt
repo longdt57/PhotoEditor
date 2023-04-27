@@ -179,6 +179,8 @@ interface PhotoEditor {
      */
     fun brushEraser()
 
+    fun canUndo(): Boolean
+    fun canRedo(): Boolean
     /**
      * Undo the last operation perform on the [PhotoEditor]
      *
@@ -259,6 +261,7 @@ interface PhotoEditor {
      * @return true if nothing is there to change
      */
     val isCacheEmpty: Boolean
+    val hasGraphicChange: Boolean
 
     /**
      * Builder pattern to define [PhotoEditor] Instance

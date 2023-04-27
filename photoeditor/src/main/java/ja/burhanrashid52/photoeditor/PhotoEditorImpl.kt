@@ -184,6 +184,14 @@ class PhotoEditorImpl @SuppressLint("ClickableViewAccessibility") constructor(
         drawingView?.brushEraser()
     }
 
+    override fun canUndo(): Boolean {
+        return viewState.addedViewsCount > 0
+    }
+
+    override fun canRedo(): Boolean {
+        return viewState.redoViewsCount > 0
+    }
+
     override fun undo(): Boolean {
         return mGraphicManager.undoView()
     }
@@ -264,6 +272,8 @@ class PhotoEditorImpl @SuppressLint("ClickableViewAccessibility") constructor(
 
     override val isCacheEmpty: Boolean
         get() = viewState.addedViewsCount == 0 && viewState.redoViewsCount == 0
+    override val hasGraphicChange: Boolean
+        get() = viewState.addedViewsCount != 0
 
     // region Shape
     override fun setShape(shapeBuilder: ShapeBuilder) {
